@@ -1,0 +1,27 @@
+{
+    "name": "Gymmy",
+    "short_name": "Gymmy",
+    "start_url": "/salat",
+    "display": "standalone",
+    "id": "gymmy!",
+    "description": "Track your gym progress analytically!",
+    "scope": "/salat",
+    "icons": [
+        {
+            "src": "icons/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "icons/384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "icons/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "lang": "en"
+}
