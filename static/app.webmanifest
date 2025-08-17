@@ -1,10 +1,10 @@
 {
-    "name": "Gymmy",
-    "short_name": "Gymmy",
+    "name": "Salat",
+    "short_name": "Salat",
     "start_url": "/salat",
     "display": "standalone",
-    "id": "gymmy!",
-    "description": "Track your gym progress analytically!",
+    "id": "Salat!",
+    "description": "Salat times!",
     "scope": "/salat",
     "icons": [
         {
