@@ -90,7 +90,7 @@ async function fetchPrayerApiData(latitude: number, longitude: number): Promise<
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
-    const tuning = { imsak: 0, fajr: 0, sunrise: 0, dhuhr: 7, asr: -1, maghrib: +2, sunset: 0, isha: 0, midnight: 0 };
+    const tuning = { imsak: 0, fajr: -1, sunrise: 0, dhuhr: 7, asr: 0, maghrib: +2, sunset: 0, isha: 1, midnight: 0 };
     const tuning_param = Object.entries(tuning).map(([key, value]) => value).join(",");
     const apiUrl = `https://api.aladhan.com/v1/calendar/${year}/${month}?latitude=${latitude}&longitude=${longitude}&method=18&tune=${tuning_param}`;
     const response = await fetch(apiUrl);
