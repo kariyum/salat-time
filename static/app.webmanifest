@@ -1,11 +1,11 @@
 {
     "name": "Salat",
     "short_name": "Salat",
-    "start_url": "/salat",
+    "start_url": "/salat-time",
     "display": "standalone",
     "id": "Salat!",
     "description": "Salat times!",
-    "scope": "/salat",
+    "scope": "/salat-time",
     "icons": [
         {
             "src": "icons/512.png",
