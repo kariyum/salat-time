@@ -19,14 +19,14 @@
 	const PRAYER_NAMES = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 	$effect(() => {
 		nextPrayer.then((next) => {
-			let diff = next.remainingTime.getTime();
+			let diff = next.time.getTime() - new Date().getTime();
 			const hours = Math.floor(diff / (1000 * 60 * 60));
 			const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 			const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 			countdown = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 
 			return setInterval(async () => {
-				diff -= 1000;
+				let diff = next.time.getTime() - new Date().getTime();
 				if (diff <= 0) {
 					await invalidateAll();
 					return;
@@ -60,7 +60,7 @@
 		// nextPrayerName = nextPrayer.name;
 		return {
 			name: nextPrayer.name,
-			remainingTime: new Date(nextPrayer.time.getTime() - now.getTime()),
+			time: nextPrayer.time,
 			date: nextPrayer.time.toLocaleTimeString([], {
 				hour: '2-digit',
 				minute: '2-digit',
